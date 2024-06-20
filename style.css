@@ -1,0 +1,118 @@
+/* 
+font-family: 'Lato', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Raleway', sans-serif;
+}
+body {
+    background: #e3f2fd; /* Jasnoniebieskie tło */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #ffffff; /* Białe tło dla kontenera */
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* Lżejszy cień */
+}
+.container .left_Side {
+    background: #37474f; /* Ciemnoszary tło */
+    padding: 40px;
+    color: #ffffff; /* Białe litery */
+}
+.profileText, .contactInfo, .education, .languages {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.profileText h2, .title {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.contactInfo ul, .education ul, .languages ul {
+    list-style: none;
+}
+.contactInfo ul li, .education ul li, .languages ul li {
+    margin: 10px 0;
+}
+.contactInfo ul li i, .education ul li i, .languages ul li i {
+    color: #29b6f6; /* Jasnoniebieskie ikony */
+}
+.contactInfo ul li span, .education ul li span, .languages ul li span {
+    color: #eceff1; /* Bardzo jasny szary tekst */
+}
+.contactInfo.language .percent, .skills .box .percent {
+    background: #cfd8dc; /* Jasnoszary pasek */
+}
+.contactInfo.language .percent div, .skills .box .percent div {
+    background: #29b6f6; /* Jasnoniebieski pasek postępu */
+}
+.container .right_Side {
+    background: #ffffff; /* Białe tło */
+    padding: 40px;
+    color: #546e7a; /* Ciemnoszary tekst */
+}
+.about .box, .skills .box {
+    margin-bottom: 20px;
+}
+.about .box .year_company h5, .about .box .text h4, .skills .box h4 {
+    color: #546e7a; /* Ciemnoszary tekst */
+}
+.interest ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 12px;
+}
+.interest ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+.interest ul li i {
+    color: #29b6f6; /* Jasnoniebieskie ikony */
+}
+
+#countdown {
+    text-align: center;
+    background: #ffffff; /* Białe tło */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+#timer {
+    font-size: 24px;
+    color: #37474f; /* Ciemnoszary tekst */
+}
+
+@media (max-width: 1000px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: 1fr;
+    }
+    .interest ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .about .box, .skills .box {
+        flex-direction: column;
+    }
+    .interest ul {
+        grid-template-columns: 1fr;
+    }
+}
